@@ -6,31 +6,45 @@ public class DefaultCountingOutRhymer {
     public static final int MAX_NUMBERS_COUNT = 12;
     private final int[] numbers = new int[MAX_NUMBERS_COUNT];
 
-    public int total = -1;
+  private int total = -1;
+  public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+
 
     public void countIn(int in) {
         if (!isFull())
-            numbers[++total] = in;
+        {
+            setTotal(getTotal() + 1);
+            numbers[getTotal()] = in;
+        }
+
     }
 
         public boolean callCheck() {
-            return total == -1;
+            return getTotal() == -1;
         }
         
             public boolean isFull() {
-                return total == 11;
+                return getTotal() == 11;
             }
         
                 protected int peekaboo() {
                     if (callCheck())
                         return ERROR_CODE;
-                    return numbers[total];
+                    return numbers[getTotal()];
                 }
             
                     public int countOut() {
                         if (callCheck())
                             return ERROR_CODE;
-                        return numbers[total--];
+                        setTotal(getTotal() - 1);
+                        return numbers[getTotal()+1];
                     }
 
 }
