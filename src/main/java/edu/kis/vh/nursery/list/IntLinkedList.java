@@ -4,7 +4,7 @@ public class IntLinkedList {
 
     public static final int ERROR_CODE = -1;
     Node last;
-    final int i = 0;
+    int i = 0;
 
     public void push(int i) {
         if (last == null)
