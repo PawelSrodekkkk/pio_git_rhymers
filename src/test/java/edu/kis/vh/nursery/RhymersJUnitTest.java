@@ -6,7 +6,7 @@ import org.junit.Test;
 public class RhymersJUnitTest {
 
     public static final int TEST_NUMBER = 888;
-
+    //testy dzialaja poprawnie
     @Test
     public void testCountIn() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
