@@ -3,6 +3,9 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
+/**
+ *
+ */
 class RhymersDemo {
 
     public static final int RHYMERS_COUNT = 4;
@@ -10,6 +13,11 @@ class RhymersDemo {
     public static final int MAX_RND_NUMBER = 20;
     public static final String TOTAL_REJECTED_IS_TEXT = "total rejected is ";
 
+    /**
+     *
+     * @param args
+     * Funkcja jest glownym dzialaniem programu, tworzymy obiekt Rhymesfactory i go testujemy
+     */
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
 
@@ -17,6 +25,11 @@ class RhymersDemo {
 
     }
 
+    /**
+     *
+     * @param factory
+     * uruchomianie testow
+     */
     private static void testRhymers(Rhymersfactory factory) {
         DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
